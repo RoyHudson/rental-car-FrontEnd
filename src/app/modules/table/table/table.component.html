@@ -1,0 +1,14 @@
+<table mat-table [dataSource]="data" *ngIf="data">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> nombre </th>
+      <td mat-cell *matCellDef="let row">{{ row.name}}</td>
+    </ng-container>
+  
+    <ng-container matColumnDef="lastname">
+      <th mat-header-cell *matHeaderCellDef> apellido </th>
+      <td mat-cell *matCellDef="let row">{{ row.lastname }}</td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let row; columns: columns"></tr>
+  </table>

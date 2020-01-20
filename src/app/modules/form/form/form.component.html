@@ -1,0 +1,56 @@
+<link rel="form.component.scss">
+<div class="formulario">
+    <form class="formulario" [formGroup]="formGroup">
+        <h1>Formulario de Aquiler Automovil</h1>
+        <!-- Formularios Basicos -->
+        <mat-form-field>
+            <input matInput placeholder="Nombre" formControlName="name" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Apellido" formControlName="lastname" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Cedula" formControlName="id" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Email" formControlName="email" required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Telefono" formControlName="phone" required>
+        </mat-form-field>
+    <div>
+        <!--Formulario de Radio-->
+        <label>Sexo:</label>
+        <mat-radio-group formControlName="checkbox" required>
+          <br>
+          <mat-radio-button value="masculino"> Masculino </mat-radio-button>
+          <br>
+          <mat-radio-button value="femenino"> Femenino </mat-radio-button>
+        </mat-radio-group>
+    </div>
+    <!-- Formulario de Fechas -->
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Dia de Alquiler">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <!-- Formulario de multiple seleccion -->
+        <mat-form-field>
+            <mat-select placeholder="Automovil" formControlName="option" required>
+              <mat-option value="option">Kia Sorento</mat-option>
+              <mat-option value="option">Kia Rio</mat-option>
+              <mat-option value="option">Kia Picanto</mat-option>
+              <mat-option value="option">Kia Cerato</mat-option>
+              <mat-option value="option">Chevrolet N300</mat-option>
+              <mat-option value="option">Chevrolet Suburban</mat-option>
+              <mat-option value="option">Chevrolet TRAX</mat-option>
+              <mat-option value="option">Isuzu D-MAX 4X4</mat-option>
+              <mat-option value="option">Mitsubishi Montero Sport</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="botonformulario">
+            <button mat-button>Enviar Informacion</button>
+        </div>
+    </form>
+
+</div>
